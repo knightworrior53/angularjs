@@ -1,0 +1,14 @@
+<body ng-app="myFirstModule">
+  <div ng-controller="myFirstController">
+    <h1>{{name}}</h1>
+  </div>
+
+  <script src="../../../scripted.min.js"></script>
+  <script>
+    angular
+      .module("myFirstModule", [])
+      .controller("myFirstController", function ($scope) {
+        $scope.name = "Nikhil";
+      });
+  </script>
+</body>
