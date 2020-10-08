@@ -1,15 +1,52 @@
-<body ng-app="myModule">
+<!-- <body ng-app="myModule">
   <div ng-controller="contOne">
-    <h1>{{name}}</h1>
+    <h1>{{ename}}</h1>
     <h1>{{age}}</h1>
     <h1>{{city}}</h1>
   </div>
 
   <div ng-controller="contTwo">
-    <h1>{{name}}</h1>
-    <h1>{{age}}</h1>
-    <h1>{{city}}</h1>
+    <h1>CountTwo name : {{tname}}</h1>
+    <div ng-controller="contThree">
+      <h1>Nested CountThree name : {{sname}}</h1>
+    </div>
+  </div> -->
+<div ng-app>
+  <div ng-init="cities=['Mumbai','Pune'];
+  users =[
+  { name : 'Akhil',
+    city : 'Ahemadabad',
+    Cont : 111,
+  },
+  { name : 'Bablu',
+    city : 'Banglore',
+    Cont : 222,
+  },
+  { name : 'Catrina',
+    city : 'Culcutta',
+    Cont : 333,
+  },
+  ];">
+    <!-- <h1 ng-repeat="place of cities">{{place}}</h1>
+    <h1 ng-bind= "cities"></h1> -->
+   <table border = "1">
+     <thread>
+       <tr>
+         <th>Name</th>
+        <th>City</th>
+        <th>Contact</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr ng-repeat = "user in users">
+        <td>{{user.name}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.Cont}}</td>
+        </tr>
+        <tbody>
+          <table>
   </div>
+</div>
   <script src="../../../scripted.min.js"></script>
   <script src="scope-rootscope.js"></script>
 </body>

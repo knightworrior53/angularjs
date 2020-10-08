@@ -1,0 +1,11 @@
+<body>
+  <div ng-app="filter" ng-controller="filterCont">
+    <h1 ng-repeat="name in names">{{name.name}}</h1>
+    <hr />
+    <h1 ng-repeat="name in names | orderBy:'name'">
+      {{name.name | uppercase }}
+    </h1>
+  </div>
+  <script src="../../../scripted.min.js"></script>
+  <script src="1_filter.js"></script>
+</body>
