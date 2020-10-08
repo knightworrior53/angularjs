@@ -1,0 +1,23 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+  />
+</head>
+
+<body>
+  <div ng-app="store">
+    <div ng-controller="storeController as store">
+      <li ng-repeat="product in store.products">
+        <div ng-hide="product.Soldout">
+          <h1>{{product.name}}</h1>
+          <h1>&#8377;{{product.price}}</h1>
+          <h1>{{product.description}}</h1>
+          <button ng-show="product.Canpurchase">Add to Cart</button>
+        </div>
+      </li>
+    </div>
+  </div>
+  <script src="../../../scripted.min.js"></script>
+  <script src="product.js"></script>
+</body>
